@@ -18,6 +18,24 @@ public class Student {
     this.activated = true;
   }
 
+//  public void setActivated(boolean activated) {
+//    this.activated = activated;
+//  } 메시지로 전달 할수없다.
+
+  public void activate() {
+    if (this.activated) {
+      throw new IllegalArgumentException();
+    }
+    this.activated = true;
+
+  }
+    public void deactivate() {
+    if (!this.activated) {
+      throw new IllegalArgumentException();
+    }
+    this.activated = false;
+  }
+
   public String getName() {
     return name;
   }
@@ -33,3 +51,4 @@ public class Student {
     return activated;
   }
 }
+
